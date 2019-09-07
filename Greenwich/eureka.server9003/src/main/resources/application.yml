@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: microservice-discovery-eureka-ha #服务的名字
+  profiles:
+    active:  peer3                     # 指定profile=peer1
+server:
+  port: 9003
+eureka:
+#  server:
+#    enable-self-preservation: false
+  instance:
+    hostname: peer3                               # 指定当profile=peer1时，主机名是peer1
+  client:
+#    healthcheck:
+#      enabled: true                               #开启健康检查（需要spring-boot-starter-actuator依赖）
+    serviceUrl:
+      defaultZone: http://peer2:9002/eureka/,http://peer1:9001/eureka/      # 将自己注册到peer2这个Eureka上面去
+    fetch-registry: true
+    register-with-eureka: true
