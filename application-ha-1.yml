@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    inetutils:
+      defaultIpAddress: 10.10.106.6
+  application:
+    name: eureka.server-ha #服务的名字
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: 10.10.106.6
+    instanceId: ${spring.application.name}:${eureka.instance.hostname}:${server.port}
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+  client:
+    serviceUrl:
+      defaultZone: http://10.10.106.7:8761/eureka/    # 将自己注册到10.10.106.7这个Eureka上面去
+    fetch-registry: true
+    register-with-eureka: true
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 20000

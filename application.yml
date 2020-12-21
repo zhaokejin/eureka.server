@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    inetutils:
+      defaultIpAddress: localhost
+  application:
+    name: eureka.server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  serviceUrl:
+    defaultZone:${spring.application.name}:${eureka.instance.hostname}:${server.port}
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 20000
+server:
+  port: 8761
+  
