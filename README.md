@@ -7,9 +7,9 @@ eureka.server各个版本  单机集群
 
 欢迎进QQ群交流学习微服务技术：
 
-点击链接加入群聊【SpringBoot SpringCloud Docker 】：https://jq.qq.com/?_wv=1027&k=5TKgV8V
+点击链接加入群聊【SpringBoot社区①群】：https://jq.qq.com/?_wv=1027&k=d967c7tr
 
-QQ群号：317945902
+QQ群号：492125087
 
-QQ群号：[317945902](https://jq.qq.com/?_wv=1027&k=5TKgV8V)
+QQ群号：[492125087](https://jq.qq.com/?_wv=1027&k=ptb22GGY)
 
